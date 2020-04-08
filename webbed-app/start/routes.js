@@ -16,4 +16,11 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+// Route.on('/').render('profile')
+
+Route.get('/', 						'LandingController.getSplash')
+
+Route.get('/user/login',			'UserController.login')
+Route.get('/user/sign-up',			'UserController.getSignUpPage')
+Route.post('/user/add',				'UserController.add')
+Route.post('/user/profile',			'UserController.profile')
